@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#ff2a70" />
+  <meta name="description" content="Selamat Ulang Tahun, Silvia Zahrotul Jannah! 🎂✨" />
+  
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="Happy Birthday, Silvia Zahrotul Jannah! 🎂✨" />
+  <meta property="og:description" content="Ada kado spesial untukmu, buka sekarang! 💕" />
+  <meta property="og:type" content="website" />
+
+  <title>Happy Birthday, Silvia! 🎂✨</title>
+
+  <!-- Google Fonts: Dancing Script (Handwriting) + Nunito (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet (Relative path untuk GitHub Pages) -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       1. SPLASH SCREEN (AUTOPLAY GATE)
+       Muncul saat pertama buka: Begitu disentuh/diklik, lagu LANGSUNG
+       berputar otomatis sesuai aturan autoplay browser mobile & desktop!
+  ============================================================ -->
+  <div id="splash" class="splash-overlay">
+    <div class="splash-card">
+      <div class="splash-sparkles">✨ 💖 ✨</div>
+      <div class="splash-gift-icon">🎁</div>
+      <h1 class="splash-title">Hai, Silvia! 💕</h1>
+      <p class="splash-sub">Ada kejutan spesial ulang tahun untukmu nih...</p>
+      
+      <button id="splash-btn" class="splash-btn">
+        <span>Buka Sekarang</span>
+        <span class="btn-sparkle">✨</span>
+      </button>
+
+      <p class="splash-tip">🎵 Sentuh tombol untuk membuka & memutar lagu</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       2. SCROLL PROGRESS BAR
+  ============================================================ -->
+  <div id="progress-bar"></div>
+
+  <!-- ============================================================
+       3. BACKGROUND MUSIC PLAYER
+       Lagu: The 1975 - About You
+       Menggunakan path relatif ganda agar kompatibel 100% di GitHub Pages
+  ============================================================ -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="./The%201975%20-%20About%20You%20(Official).mp3" type="audio/mpeg" />
+    <source src="./The 1975 - About You (Official).mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung pemutar audio.
+  </audio>
+
+  <!-- Floating Music Toggle Button -->
+  <button id="music-btn" aria-label="Toggle Musik" title="Putar/Jeda Musik">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <!-- ============================================================
+       4. CONFETTI CANVAS
+  ============================================================ -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ============================================================
+       5. SECTION 1 — HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-badge">✨ SPECIAL DAY FOR YOU ✨</div>
+
+    <div id="gift-wrap" role="button" tabindex="0" aria-label="Buka kejutan ulang tahun">
+      <div class="gift-box-glow"></div>
+      <div class="gift-icon">🎁</div>
+      <p class="hero-hint">Ada sesuatu buat kamu nih!</p>
+      <span class="hero-tap-label">— Sentuh kado ini —</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. SECTION 2 — UCAPAN UTAMA
+  ============================================================ -->
+  <section id="greeting" class="fade-in">
+    <p class="section-eyebrow">🎂 HAPPY BIRTHDAY 🎂</p>
+    <h1 class="main-title">Happy Birthday,<br /><span class="highlight-name">Silvia Zahrotul Jannah!</span> 🎂✨</h1>
+
+    <div class="greeting-divider">
+      <span class="line"></span>
+      <span class="divider-icon">🌸</span>
+      <span class="line"></span>
+    </div>
+
+    <p class="greeting-desc">
+      Semoga di usiamu yang baru ini, setiap langkahmu dipenuhi berkah,
+      senyumanmu makin merekah, dan semua impian indahmu segera terwujud nyata.
+      Kamu adalah anugerah terindah! 💕
+    </p>
+
+    <div class="floating-emojis">
+      <span class="float-emoji">🎈</span>
+      <span class="float-emoji">🌷</span>
+      <span class="float-emoji">🎉</span>
+      <span class="float-emoji">💖</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. SECTION 3 — GALERI MEMORI (POLAROID AESTHETIC)
+  ============================================================ -->
+  <section id="gallery" class="fade-in">
+    <p class="section-eyebrow">📸 SWEET MOMENTS</p>
+    <h2 class="section-title">Galeri Memori Kita</h2>
+    <p class="section-desc">Kumpulan kenangan manis yang selalu bikin tersenyum 🌸</p>
+
+    <div class="gallery-grid">
+
+      <!-- Foto 1 -->
+      <div class="polaroid">
+        <div class="polaroid-pin">📍</div>
+        <div class="polaroid-img-wrapper">
+          <img src="./image1.jpeg" alt="Kenangan 1" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80'" />
+        </div>
+        <p class="polaroid-caption">Momen Pertama 🌸</p>
+      </div>
+
+      <!-- Foto 2 -->
+      <div class="polaroid">
+        <div class="polaroid-pin">📍</div>
+        <div class="polaroid-img-wrapper">
+          <img src="./image2.jpeg" alt="Kenangan 2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80'" />
+        </div>
+        <p class="polaroid-caption">Senyum Terbaikmu 💖</p>
+      </div>
+
+      <!-- Foto 3 -->
+      <div class="polaroid">
+        <div class="polaroid-pin">📍</div>
+        <div class="polaroid-img-wrapper">
+          <img src="./image3.JPG" alt="Kenangan 3" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80'" />
+        </div>
+        <p class="polaroid-caption">Waktu Terbaik Bersamamu ✨</p>
+      </div>
+
+      <!-- Foto 4 -->
+      <div class="polaroid">
+        <div class="polaroid-pin">📍</div>
+        <div class="polaroid-img-wrapper">
+          <img src="./image4.JPG" alt="Kenangan 4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80'" />
+        </div>
+        <p class="polaroid-caption">Selalu di Hati 🤍</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. SECTION 4 — SURAT KHUSUS (TYPEWRITER EFFECT)
+  ============================================================ -->
+  <section id="letter" class="fade-in">
+    <p class="section-eyebrow">💌 SPECIAL LETTER</p>
+    <h2 class="section-title">Untuk Kamu, Silvia</h2>
+
+    <div class="letter-box">
+      <div class="letter-header">
+        <span class="letter-stamp">💌</span>
+        <p class="letter-date">14 November ✨</p>
+      </div>
+
+      <!-- Efek typewriter akan mengisi teks di sini -->
+      <div id="typed-text"></div>
+
+      <div class="letter-sign">
+        <p class="sign-note">Selalu untukmu,</p>
+        <p class="sign-name">— Dengan segenap cinta & sayang 💕</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-hearts">💖 🌸 💖</div>
+    <p class="footer-romantic">I love you to the moon and back 🤍</p>
+    <p class="footer-small">Happy Birthday, Silvia Zahrotul Jannah ✨ Semoga hari-harimu selalu indah.</p>
+  </footer>
+
+  <!-- External JavaScript (Relative path untuk GitHub Pages) -->
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
