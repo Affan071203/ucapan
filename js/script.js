@@ -289,7 +289,7 @@ Hari ini adalah hari yang sangat istimewa, hari di mana seseorang yang begitu be
 
 Terima kasih sudah menjadi sosok yang selalu membawa kehangatan, tawa, dan kebahagiaan. Caramu tersenyum dan kebaikan hatimu selalu punya cara tersendiri untuk membuat hari-hari terasa jauh lebih bermakna.
 
-Di usiamu yang baru ini, aku berdoa setulus hati:
+Di usiamu yang baru ini, aku berdoa setulus hati
 Semoga langkahmu selalu dimudahkan, setiap impian dan cita-citamu dikabulkan, selalu diberikan kesehatan, dan dikelilingi oleh orang-orang yang tulus menyayangimu.
 
 Kamu pantas mendapatkan semua kebahagiaan dan hal-hal terindah di dunia ini. Jangan pernah lelah ya sayanggg! 💕
