@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
      - Jika browser memblokir (aturan autoplay mobile),
        tombol splash screen / interaksi pertama akan langsung memutar lagu!
   ============================================================ */
-  const audio     = document.getElementById('bg-audio');
-  const musicBtn  = document.getElementById('music-btn');
+  const audio = document.getElementById('bg-audio');
+  const musicBtn = document.getElementById('music-btn');
   const musicIcon = musicBtn ? musicBtn.querySelector('.music-icon') : null;
-  const splash    = document.getElementById('splash');
+  const splash = document.getElementById('splash');
   const splashBtn = document.getElementById('splash-btn');
 
   function updateMusicUI(isPlaying) {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (progressBar) {
     window.addEventListener('scroll', () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled  = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      const scrolled = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
       progressBar.style.width = scrolled + '%';
     }, { passive: true });
   }
@@ -152,28 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
      5. CONFETTI ENGINE (Vibrant Pink & Gold)
   ============================================================ */
   const canvas = document.getElementById('confetti-canvas');
-  let ctx      = canvas ? canvas.getContext('2d') : null;
-  let pieces   = [];
-  let animId   = null;
+  let ctx = canvas ? canvas.getContext('2d') : null;
+  let pieces = [];
+  let animId = null;
 
   function resizeCanvas() {
     if (!canvas) return;
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas, { passive: true });
 
   function Confetto() {
-    this.x     = Math.random() * canvas.width;
-    this.y     = -20;
-    this.w     = Math.random() * 12 + 6;
-    this.h     = Math.random() * 7 + 4;
+    this.x = Math.random() * canvas.width;
+    this.y = -20;
+    this.w = Math.random() * 12 + 6;
+    this.h = Math.random() * 7 + 4;
     this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
-    this.vy    = Math.random() * 3.5 + 2.5;
-    this.vx    = (Math.random() - 0.5) * 3;
+    this.vy = Math.random() * 3.5 + 2.5;
+    this.vx = (Math.random() - 0.5) * 3;
     this.angle = Math.random() * 360;
-    this.spin  = (Math.random() - 0.5) * 8;
+    this.spin = (Math.random() - 0.5) * 8;
   }
 
   Confetto.prototype.draw = function () {
@@ -208,10 +208,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     pieces.forEach(p => {
-      p.x     += p.vx;
-      p.y     += p.vy;
+      p.x += p.vx;
+      p.y += p.vy;
       p.angle += p.spin;
-      p.vy    *= 1.002;
+      p.vy *= 1.002;
       p.draw();
     });
 
@@ -228,10 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 14; i++) {
       setTimeout(() => {
         const balloon = document.createElement('div');
-        balloon.className   = 'balloon';
+        balloon.className = 'balloon';
         balloon.textContent = balloonEmojis[Math.floor(Math.random() * balloonEmojis.length)];
-        balloon.style.left      = Math.random() * 90 + 'vw';
-        balloon.style.fontSize  = (34 + Math.random() * 26) + 'px';
+        balloon.style.left = Math.random() * 90 + 'vw';
+        balloon.style.fontSize = (34 + Math.random() * 26) + 'px';
 
         const duration = 3.5 + Math.random() * 2.5;
         balloon.style.animationDuration = duration + 's';
@@ -292,15 +292,15 @@ Terima kasih sudah menjadi sosok yang selalu membawa kehangatan, tawa, dan kebah
 Di usiamu yang baru ini, aku berdoa setulus hati:
 Semoga langkahmu selalu dimudahkan, setiap impian dan cita-citamu dikabulkan, selalu diberikan kesehatan, dan dikelilingi oleh orang-orang yang tulus menyayangimu.
 
-Kamu pantas mendapatkan semua kebahagiaan dan hal-hal terindah di dunia ini. Jangan pernah lelah untuk bersinar dan menjadi dirimu sendiri ya! 💕
+Kamu pantas mendapatkan semua kebahagiaan dan hal-hal terindah di dunia ini. Jangan pernah lelah ya sayanggg! 💕
 
-Selamat ulang tahun, Silvia! ✨`;
+Selamat ulang tahun, Sayang!🌸✨`;
 
-  const typedEl  = document.getElementById('typed-text');
+  const typedEl = document.getElementById('typed-text');
   const cursorEl = document.createElement('span');
   cursorEl.className = 'cursor';
 
-  let charIndex     = 0;
+  let charIndex = 0;
   let typingStarted = false;
 
   function typeChar() {
@@ -310,7 +310,7 @@ Selamat ulang tahun, Silvia! ✨`;
       typedEl.appendChild(cursorEl);
       charIndex++;
 
-      const ch    = letterText[charIndex - 1];
+      const ch = letterText[charIndex - 1];
       const delay = ch === '\n'
         ? 320
         : (ch === ',' || ch === '.' || ch === '!' || ch === ':')
